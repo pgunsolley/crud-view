@@ -24,9 +24,9 @@ trait SidebarNavigationTrait
     /**
      * Returns the sidebar navigation to show on scaffolded view
      *
-     * @return string|false|null
+     * @return array|string|false|null
      */
-    protected function _getSidebarNavigation(): string|false|null
+    protected function _getSidebarNavigation(): array|string|false|null
     {
         $action = $this->_action();
 
