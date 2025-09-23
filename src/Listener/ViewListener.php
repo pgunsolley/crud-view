@@ -50,7 +50,7 @@ class ViewListener extends BaseListener
         if ($related === []) {
             $this->associations = [];
         } else {
-            $this->associations = $this->_associations(array_keys($related));
+            $this->associations = $this->_associations($related);
         }
 
         if (!$event->getSubject()->query->getContain()) {
@@ -71,7 +71,7 @@ class ViewListener extends BaseListener
         if ($related === []) {
             $this->associations = [];
         } else {
-            $this->associations = $this->_associations(array_keys($related));
+            $this->associations = $this->_associations($related);
         }
 
         if (!$event->getSubject()->query->getContain()) {
@@ -97,7 +97,7 @@ class ViewListener extends BaseListener
         }
 
         if (!isset($this->associations)) {
-            $this->associations = $this->_associations(array_keys($this->_getRelatedModels()));
+            $this->associations = $this->_associations($this->_getRelatedModels());
         }
 
         $this->ensureConfig();
